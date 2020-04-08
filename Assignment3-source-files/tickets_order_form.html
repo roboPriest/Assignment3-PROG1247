@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Party Tickets Order Form</title>
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+
+	<body>
+		<!-- header starts -->
+		<header>
+			<img src="images/pumpkin.gif" alt="Pumpkin" width="85">
+			<h2>The Halloween Store</h2>
+			<h3>For the little Goblin in all of us!</h3>
+		</header>
+		
+		<!-- navigation starts -->
+		<nav id="nav_menu">
+			<ul>
+				<li><a href="index.html" class="current">Home</a></li>
+				<li><a href="about_us.html">About Us</a>
+					<ul>						
+						<li><a href="our_history.html">Our History</a></li>
+						<li><a href="our_team.html">Our Team</a></li>
+					</ul>
+				</li>
+				<li><a href="products.html">Our Products</a></li>
+				<li><a href="tickets_order_form.html">Party Tickets</a></li>
+				<li><a href="contact_us.html">Contact Us</a></li>
+			</ul>
+		</nav>
+
+		<!-- main content starts -->
+		<main>
+			<!-- sidebar starts -->
+			<aside>
+				<ul>
+					<li><a href="products/props.html">Props</a></li>
+					<li><a href="products/costumes.html">Costumes</a></li>
+					<li><a href="products/special.html">Special FX</a></li>
+					<li><a href="products/masks.html">Masks</a></li>
+				</ul>
+			</aside>
+
+			<!-- the main section of the content starts -->
+			<section>
+				<h1>Buy Tickets for a Halloween Party</h1>
+				
+				<!-- the order form goes here -->
+				<form action = "/place_order.html" method = "post" name = "order_form">
+				
+					<fieldset>
+						<legend> Member Information </legend><br>
+						
+						<label for = "email">Email:</label>
+						<input type = "email" id = "email" name = "email"
+						pattern = [a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$ required><br><br>
+						
+						<label for = "fName">First name:</label>
+						<input type = "text" id = "fName" name = "fName" required><br><br>
+						
+						<label for = "lName">Last name:</label>
+						<input type = "text" id = "lName" name = "lName" required><br><br>
+						
+						<label for = "address">Address:</label>
+						<input type = "text" id = "address" name = "address" required><br><br>
+						
+						<label for="city">City:</label>
+						<input type = "text" id = "city" name = "city" required><br><br>
+						
+						<label for = "province">Province:</label>
+						<input type = "text" id = "province" name = "province" 
+						pattern = [A-Za-70-9]{2,2} placeholder = "2-character code" required><br><br>
+						
+						<label for = "postalCode">Postal Code:</label>
+						<input type = "text" id = "postalCode" name = "postalCode"
+						pattern = [A-Za-70-9]{6,6} placeholder = "6 characters" required><br><br>
+						
+						<label for = "phoneNumber">Phone Number:</label>
+						<input type = "text" id = "phoneNumber" name = "phoneNumber"
+						pattern =  \d{3}[\-]\d{3} [\-]\d{4} placeholder = "999-999-9999" required><br><br>
+
+					</fieldset>
+					
+					<fieldset>
+						<legend> Ordering Information </legend><br>
+						
+						<label for = "PartyType"> Party: </label>
+						<input list="PartyType" placeholder = "Fang-tastic Feast">
+						<datalist id="PartyType" placeholder = "visa">
+							<option value="Fang-tastic Feast">
+							<option value="Fright Night">
+							<option value="Ghouls' Night Out">
+							<option value="Monster Mash">
+						</datalist><br><br>
+						
+						<label for = "OrderType"> Order Type: </label>
+						<input list="OrderType" placeholder = "Member Package">
+						<datalist id="OrderType">
+							<option value="Member Package">
+							<option value="Donor Package">
+							<option value="Single Tickets">
+						</datalist><br><br>
+						
+						<label for = "ticketNum">number of tickets:</label>
+						<input type = "number" id = "ticketNum" name = "ticketNum"
+						placeholder = "Number of single tickets" ><br><br>
+						
+					</fieldset>
+
+					<fieldset id = "payment">
+						<legend> Payment Method</legend><br>
+						
+						<input type = "radio" id = "BillMe" name = "PaySelect" value = "BillMe">
+						<label for = "BillMe"> Bill Me </label>
+						
+						<input type = "radio" id = "CreditCard" name = "PaySelect" value = "CreditCard">
+						<label for = "CreditCard"> Credit Card </label>
+					</fieldset>
+
+					
+					<fieldset>
+						<legend> Credit Card Information </legend><br>
+						
+						<label for = "cardType"> Card Type: </label>
+						<input list="cardType" placeholder = "visa">
+						<datalist id="cardType">
+							<option value="Visa">
+							<option value="Master Card">
+							<option value="Discover">
+						</datalist><br><br>
+						
+						<label for = "cardNumber">Card Number: </label>
+						<input type = "cardNumber" id = "cardNumber" name = "cardNumber"
+						pattern = ^\d{4}-\d{4}-\d{4}-\d{4}$ placeholder = "16 digits" required><br><br>
+						
+						<label for = "expMonth"> Expiry Date: </label>
+						
+						<input list="expMonth" placeholder = "January" size="10">
+						<datalist id="expMonth">
+							<option value="January">
+							<option value="February">
+							<option value="March">
+							<option value="April">
+							<option value="May">
+							<option value="June">
+							<option value="July">
+							<option value="August">	
+							<option value="September">			
+							<option value="October">	
+							<option value="November">	
+							<option value="December">							
+						</datalist>
+						
+						
+						<input list="expYear" placeholder = "2019" size="5">
+						<datalist id="expYear">
+							<option value="2015">
+							<option value="2016">
+							<option value="2017">
+							<option value="2018">		
+							<option value="2019">							
+						</datalist ><br><br>
+						
+						
+					</fieldset>
+				
+
+					
+					<fieldset id = "buttons">
+						<legend>Submit Your Order</legend>
+						<input type = "submit" id = "submit" value = "Submit"> 
+						<input type = "reset" id = "reset" value = "Reset Fields">
+					</fieldset>
+				</form>
+				
+			</section>
+		</main>
+
+		<!-- footer starts -->
+		<footer>
+			<p>&copy; 2020 Tanner Schell</p>
+		</footer>
+	</body>
+</html>
